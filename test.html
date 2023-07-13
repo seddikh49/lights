@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<link  rel="stylesheet" href="slick.css"/>
+<link  rel="stylesheet" href="slick-theme.css"/>
+<link  rel="stylesheet" href="css.css"/>
+    <title>Document</title>
+</head>
+<body>
+  
+ 
+<form class="sign-in">
+  <h2>sign in</h2>
+  <div class="input-box">
+    <span><i class="fa-solid fa-user"></i></span>
+    <input type="text" required>
+    <label for="">Enter your Username</label>
+  </div>
+  <div class="input-box">
+    <span><i class="fa-solid fa-lock"></i></span>
+    <input type="password" required>
+    <label for="">Enter your password</label>
+  </div>
+  <div class="remember"> Remember your password <input type="checkbox"></div>
+  <p>You don't have account? <i>Register</i></p>
+  <div class="btn">
+    <input type="button" value="sign in">
+  </div>
+</form>
+
+<!--register---------------------->
+<form class="register" action="">
+  <h2>sign up</h2>
+  <div class="input-box">
+    <span><i class="fa-solid fa-user"></i></span>
+    <input type="text" required>
+    <label for="">Enter your Username</label>
+  </div>
+  <div class="input-box">
+    <span><i class="fa-solid fa-envelope"></i></span>
+    <input type="text" required>
+    <label for="">Enter your email</label>
+  </div>
+  <div class="input-box">
+    <span><i class="fa-solid fa-lock"></i></span>
+    <input type="password" required>
+    <label for="">Enter your password</label>
+  </div>
+  <div class="input-box">
+    <span><i class="fa-solid fa-lock"></i></span>
+    <input type="password"required >
+    <label for="">Confirm your password</label>
+  </div>
+  <p>You have account?<i>Sign in</i></p>
+  <div class="btn">
+    <input type="button" value="sign up">
+  </div>
+</form>
+
+<div class="contacts">
+  <div class="track"></div>
+  <div class="on">On</div>
+  <div class="off">Off</div>
+</div>
+<div class="flashlight-aqua"></div>
+  <div class="flashlight-red"></div>
+
+
+
+
+
+   
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+ <script>
+ $(window).ready(function(){
+  $('.on').hide()
+  
+
+  $('.off').on('click', function(){
+    $(this).animate({top:'20px'},400).fadeOut();
+   $(this).css('top','120px');
+   $('.on').fadeIn(1400).css('top','20px')
+   $('.flashlight-aqua').slideDown(200)
+   $('.flashlight-red').slideDown(200)
+    $(':root').css({"--bshadow":"aqua", "--clr":"aqua" ,"--red":"red","--snow":"red"})
+  })
+
+  $('.on').on('click', function(){
+   $(this).animate({top:'130px'},400).fadeOut()
+   $(this).css('top','20px')
+   $('.off').fadeIn(1400).css('top','130px')
+   $(':root').css({"--bshadow":"black", "--clr":"snow" ,"--red":"black","--snow":"snow"})
+   $('.flashlight-aqua').slideUp(200)
+   $('.flashlight-red').slideUp(200)
+  })
+  $('.sign-in p i').on('click',function(){
+    $('.sign-in').animate({left:'-600px'},200)
+    $('.register').css({right:'720px'},1000)
+    $('.flashlight-aqua').animate({left:'-600px'},900)
+    $('.flashlight-red').animate({right: '720px'},400)
+  })
+  $('.register p i').on('click',function(){
+    $('.sign-in').css({left:'703px'},1000)
+    $('.register').css({right:'-600px'},1000)
+    $('.flashlight-aqua').animate({left:'703px'},500)
+    $('.flashlight-red').animate({right: '-600px'},400)
+    
+  })
+
+
+
+
+
+
+
+
+
+
+  /*
+  
+
+  $('.off').on('click', function(){
+   $(this).animate({top:'20px'},400).fadeOut();
+   $(this).css('top','120px');
+   $('.on').fadeIn(1400).css('top','20px')
+   $('form').css({ boxShadow: ' 5px 5px 20px aqua, -5px -5px 30px aqua ', border: '1px solid aqua'})
+   $('h2').css('textShadow','1px 1px 5px aqua,-1px -1px 5px aqua')
+   $('span').css('color','aqua')
+   $('.btn input').css({background:'aqua', color: 'black'})
+   $('.input-box input').css({borderBottom:' solid 1px aqua'})
+   $('.flashlight').slideDown(200)
+  })
+  $('.on').on('click', function(){
+   $(this).animate({top:'130px'},400).fadeOut()
+   $(this).css('top','20px')
+   $('.off').fadeIn(1400).css('top','130px')
+   $('form').css({ boxShadow: '10px 10px 10px black , -10px -10px 10px black', border: 'none'})
+   $('h2').css('textShadow','1px 1px 5px black,-1px -1px 5px black')
+   $('span').css('color','white')
+   $('.btn input').css({background:'snow', color: 'black'}) 
+   $('.input-box input').css({borderBottom:' solid 1px snow'})
+   $('.flashlight').slideUp(200)
+  })*/
+
+  
+
+
+
+
+ })
+  
+
+
+ </script>
+    </body>
+  </html>
+
